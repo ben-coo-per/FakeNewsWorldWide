@@ -39,7 +39,7 @@ struct HelpButton: View {
     var body: some View {
         ZStack{
             Color(.white)
-            Image(systemName:"questionmark.circle.fill").imageScale(.large).padding(10)
+            Image(systemName:"questionmark.circle.fill").imageScale(.large).padding(10).foregroundColor(.black)
         }.frame(width: 60).overlay(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(.black, lineWidth: 1.5)

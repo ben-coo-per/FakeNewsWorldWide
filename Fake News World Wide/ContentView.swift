@@ -10,17 +10,23 @@ import Combine
 
 
 struct ContentView: View {
-    @StateObject var articleStore = ArticleStore()
+    @StateObject var articleStore = ArticleStore(service:ArticleService())
     
     var body: some View {
+        let locationBinding = Binding.constant( self.articleStore.articles.map { $0.location } )
+        
         VStack(spacing:0){
             HeaderView()
-            MapView(locations: articleStore.articles.map { $0.location })
+            MapView(locations: locationBinding)
             HeadlinesBoxView(){
                 ForEach(articleStore.articles, id: \.id){ article in
                     HeadlineView(headline: article.headline, date: article.date, locationName: article.location.title, author: article.author)
                 }
             }
+        }.onAppear {
+            articleStore.hydrateHeadlines()
+        }.onTapGesture {
+            print(articleStore.articles.count)
         }
     }
 }

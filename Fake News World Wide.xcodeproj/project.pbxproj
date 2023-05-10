@@ -13,18 +13,18 @@
 		BA132B852A09988500ABF594 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA132B842A09988500ABF594 /* Preview Assets.xcassets */; };
 		BA132B8F2A099B2500ABF594 /* PPMonumentExtended-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA132B8D2A099B2500ABF594 /* PPMonumentExtended-RegularItalic.otf */; };
 		BA132B902A099B2500ABF594 /* PPTelegraf-UltraboldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA132B8E2A099B2500ABF594 /* PPTelegraf-UltraboldOblique.otf */; };
-		BA132B942A099B7000ABF594 /* PPEditorialNew-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA132B912A099B6F00ABF594 /* PPEditorialNew-Regular.otf */; };
-		BA132B952A099B7000ABF594 /* PPEditorialNew-Ultrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA132B922A099B7000ABF594 /* PPEditorialNew-Ultrabold.otf */; };
-		BA132B962A099B7000ABF594 /* PPEditorialNew-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA132B932A099B7000ABF594 /* PPEditorialNew-Ultralight.otf */; };
 		BA132B9C2A09B74400ABF594 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132B9B2A09B74400ABF594 /* Article.swift */; };
 		BA132B9F2A09BAA000ABF594 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = BA132B9E2A09BAA000ABF594 /* OpenAI */; };
-		BA132BA12A09BAF700ABF594 /* OpenAiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BA02A09BAF600ABF594 /* OpenAiCaller.swift */; };
 		BA132BA52A0AD0FF00ABF594 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BA42A0AD0FF00ABF594 /* Location.swift */; };
 		BA132BA82A0AD1FC00ABF594 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BA72A0AD1FC00ABF594 /* ArticleStore.swift */; };
 		BA132BAA2A0AE39A00ABF594 /* HeadlineBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */; };
 		BA132BAC2A0AE3D100ABF594 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */; };
 		BA132BAE2A0AE3FB00ABF594 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BAD2A0AE3FB00ABF594 /* MapView.swift */; };
-		BAA710972A0B1157004BF7BC /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA710962A0B1157004BF7BC /* Headline.swift */; };
+		BAA710972A0B1157004BF7BC /* HeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA710962A0B1157004BF7BC /* HeadlineView.swift */; };
+		BAA710A22A0BEB33004BF7BC /* PPEditorialNew-Ultrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA7109F2A0BEB33004BF7BC /* PPEditorialNew-Ultrabold.otf */; };
+		BAA710A32A0BEB33004BF7BC /* PPEditorialNew-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA710A02A0BEB33004BF7BC /* PPEditorialNew-Ultralight.otf */; };
+		BAA710A42A0BEB33004BF7BC /* PPEditorialNew-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA710A12A0BEB33004BF7BC /* PPEditorialNew-Regular.otf */; };
+		BAA710A62A0C21DE004BF7BC /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA710A52A0C21DE004BF7BC /* ArticleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,18 +35,18 @@
 		BA132B842A09988500ABF594 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA132B8D2A099B2500ABF594 /* PPMonumentExtended-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPMonumentExtended-RegularItalic.otf"; sourceTree = "<group>"; };
 		BA132B8E2A099B2500ABF594 /* PPTelegraf-UltraboldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPTelegraf-UltraboldOblique.otf"; sourceTree = "<group>"; };
-		BA132B912A099B6F00ABF594 /* PPEditorialNew-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Regular.otf"; sourceTree = "<group>"; };
-		BA132B922A099B7000ABF594 /* PPEditorialNew-Ultrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Ultrabold.otf"; sourceTree = "<group>"; };
-		BA132B932A099B7000ABF594 /* PPEditorialNew-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Ultralight.otf"; sourceTree = "<group>"; };
 		BA132B972A099D3B00ABF594 /* Fake-News-World-Wide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Fake-News-World-Wide-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BA132B9B2A09B74400ABF594 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		BA132BA02A09BAF600ABF594 /* OpenAiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiCaller.swift; sourceTree = "<group>"; };
 		BA132BA42A0AD0FF00ABF594 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BA132BA72A0AD1FC00ABF594 /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineBoxView.swift; sourceTree = "<group>"; };
 		BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BA132BAD2A0AE3FB00ABF594 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		BAA710962A0B1157004BF7BC /* Headline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
+		BAA710962A0B1157004BF7BC /* HeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineView.swift; sourceTree = "<group>"; };
+		BAA7109F2A0BEB33004BF7BC /* PPEditorialNew-Ultrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Ultrabold.otf"; sourceTree = "<group>"; };
+		BAA710A02A0BEB33004BF7BC /* PPEditorialNew-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Ultralight.otf"; sourceTree = "<group>"; };
+		BAA710A12A0BEB33004BF7BC /* PPEditorialNew-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PPEditorialNew-Regular.otf"; sourceTree = "<group>"; };
+		BAA710A52A0C21DE004BF7BC /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 				BA132B812A09988500ABF594 /* Assets.xcassets */,
 				BA132B9A2A09B71200ABF594 /* Fonts */,
 				BA132B832A09988500ABF594 /* Preview Content */,
-				BA132BA02A09BAF600ABF594 /* OpenAiCaller.swift */,
 			);
 			path = "Fake News World Wide";
 			sourceTree = "<group>";
@@ -105,11 +104,11 @@
 		BA132B9A2A09B71200ABF594 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				BA132B912A099B6F00ABF594 /* PPEditorialNew-Regular.otf */,
-				BA132B922A099B7000ABF594 /* PPEditorialNew-Ultrabold.otf */,
-				BA132B932A099B7000ABF594 /* PPEditorialNew-Ultralight.otf */,
 				BA132B8D2A099B2500ABF594 /* PPMonumentExtended-RegularItalic.otf */,
 				BA132B8E2A099B2500ABF594 /* PPTelegraf-UltraboldOblique.otf */,
+				BAA710A12A0BEB33004BF7BC /* PPEditorialNew-Regular.otf */,
+				BAA7109F2A0BEB33004BF7BC /* PPEditorialNew-Ultrabold.otf */,
+				BAA710A02A0BEB33004BF7BC /* PPEditorialNew-Ultralight.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -120,7 +119,7 @@
 				BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */,
 				BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */,
 				BA132BAD2A0AE3FB00ABF594 /* MapView.swift */,
-				BAA710962A0B1157004BF7BC /* Headline.swift */,
+				BAA710962A0B1157004BF7BC /* HeadlineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				BA132BA72A0AD1FC00ABF594 /* ArticleStore.swift */,
+				BAA710A52A0C21DE004BF7BC /* ArticleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,13 +206,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA710A32A0BEB33004BF7BC /* PPEditorialNew-Ultralight.otf in Resources */,
+				BAA710A22A0BEB33004BF7BC /* PPEditorialNew-Ultrabold.otf in Resources */,
 				BA132B852A09988500ABF594 /* Preview Assets.xcassets in Resources */,
-				BA132B962A099B7000ABF594 /* PPEditorialNew-Ultralight.otf in Resources */,
 				BA132B8F2A099B2500ABF594 /* PPMonumentExtended-RegularItalic.otf in Resources */,
-				BA132B952A099B7000ABF594 /* PPEditorialNew-Ultrabold.otf in Resources */,
 				BA132B822A09988500ABF594 /* Assets.xcassets in Resources */,
 				BA132B902A099B2500ABF594 /* PPTelegraf-UltraboldOblique.otf in Resources */,
-				BA132B942A099B7000ABF594 /* PPEditorialNew-Regular.otf in Resources */,
+				BAA710A42A0BEB33004BF7BC /* PPEditorialNew-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA132BA12A09BAF700ABF594 /* OpenAiCaller.swift in Sources */,
-				BAA710972A0B1157004BF7BC /* Headline.swift in Sources */,
+				BAA710972A0B1157004BF7BC /* HeadlineView.swift in Sources */,
 				BA132B802A09988400ABF594 /* ContentView.swift in Sources */,
 				BA132BA52A0AD0FF00ABF594 /* Location.swift in Sources */,
 				BA132B7E2A09988400ABF594 /* Fake_News_World_WideApp.swift in Sources */,
@@ -232,6 +231,7 @@
 				BA132BA82A0AD1FC00ABF594 /* ArticleStore.swift in Sources */,
 				BA132B9C2A09B74400ABF594 /* Article.swift in Sources */,
 				BA132BAE2A0AE3FB00ABF594 /* MapView.swift in Sources */,
+				BAA710A62A0C21DE004BF7BC /* ArticleService.swift in Sources */,
 				BA132BAC2A0AE3D100ABF594 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

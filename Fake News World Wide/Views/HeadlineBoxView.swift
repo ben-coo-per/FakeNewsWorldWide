@@ -19,7 +19,7 @@ struct HeadlinesBoxView<Content: View>: View {
                 Color("bg").edgesIgnoringSafeArea(.all)
                 ScrollView(showsIndicators: true){
                     VStack(spacing:16) {
-                        Text("Top Headlines").frame(maxWidth: .infinity, alignment: .leading).font(.custom("PPTelegraf-UltraboldOblique", size: 32))
+                        Text("Top Headlines").frame(maxWidth: .infinity, alignment: .leading).font(.custom("PPTelegraf-UltraboldOblique", size: 32)).foregroundColor(.black)
                         headlines
                     }.padding()
                 }

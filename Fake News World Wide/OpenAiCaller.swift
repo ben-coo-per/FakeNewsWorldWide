@@ -6,11 +6,3 @@
 //
 
 import Foundation
-import OpenAI
-
-
-final class OpenAIClient{
-    let openAI = OpenAI(apiToken: ProcessInfo.processInfo.environment["OPEN_AI_KEY"] ?? "")
-    
-    
-}
