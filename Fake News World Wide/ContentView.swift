@@ -18,6 +18,7 @@ struct ContentView: View {
         let a = Article(headline: "foo",
                         location: l,
                         date: Date(),
+                        author:"Boo Baby",
                         body: nil
         )
         articleStore.addArticle(a)
@@ -31,13 +32,8 @@ struct ContentView: View {
             MapView()
             HeadlinesBoxView(){
                 ForEach(articleStore.articles, id: \.id){ article in
-                    HStack {
-                        Text(article.headline)
-                        Text(article.id)
-                    }
-                }
-                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                    addArticle()
+                    HeadlineView(headline: article.headline, date: article.date, locationName: article.location.name, author: article.author)
+                    HeadlineView(headline: article.headline, date: article.date, locationName: article.location.name, author: article.author)
                 }
             }
         }

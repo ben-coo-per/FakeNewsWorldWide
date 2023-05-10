@@ -24,6 +24,7 @@
 		BA132BAA2A0AE39A00ABF594 /* HeadlineBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */; };
 		BA132BAC2A0AE3D100ABF594 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */; };
 		BA132BAE2A0AE3FB00ABF594 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA132BAD2A0AE3FB00ABF594 /* MapView.swift */; };
+		BAA710972A0B1157004BF7BC /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA710962A0B1157004BF7BC /* Headline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineBoxView.swift; sourceTree = "<group>"; };
 		BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BA132BAD2A0AE3FB00ABF594 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BAA710962A0B1157004BF7BC /* Headline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				BA132BA92A0AE39A00ABF594 /* HeadlineBoxView.swift */,
 				BA132BAB2A0AE3D100ABF594 /* HeaderView.swift */,
 				BA132BAD2A0AE3FB00ABF594 /* MapView.swift */,
+				BAA710962A0B1157004BF7BC /* Headline.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA132BA12A09BAF700ABF594 /* OpenAiCaller.swift in Sources */,
+				BAA710972A0B1157004BF7BC /* Headline.swift in Sources */,
 				BA132B802A09988400ABF594 /* ContentView.swift in Sources */,
 				BA132BA52A0AD0FF00ABF594 /* Location.swift in Sources */,
 				BA132B7E2A09988400ABF594 /* Fake_News_World_WideApp.swift in Sources */,
