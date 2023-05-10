@@ -12,28 +12,13 @@ import Combine
 struct ContentView: View {
     @StateObject var articleStore = ArticleStore()
     
-    func addArticle() {
-        print("called add article")
-        let l = Location(name: "here", lngLat: (lng: 2.3, lat:4.5))
-        let a = Article(headline: "foo",
-                        location: l,
-                        date: Date(),
-                        author:"Boo Baby",
-                        body: nil
-        )
-        articleStore.addArticle(a)
-    }
-    
-    
-
     var body: some View {
         VStack(spacing:0){
             HeaderView()
-            MapView()
+            MapView(locations: articleStore.articles.map { $0.location })
             HeadlinesBoxView(){
                 ForEach(articleStore.articles, id: \.id){ article in
-                    HeadlineView(headline: article.headline, date: article.date, locationName: article.location.name, author: article.author)
-                    HeadlineView(headline: article.headline, date: article.date, locationName: article.location.name, author: article.author)
+                    HeadlineView(headline: article.headline, date: article.date, locationName: article.location.title, author: article.author)
                 }
             }
         }

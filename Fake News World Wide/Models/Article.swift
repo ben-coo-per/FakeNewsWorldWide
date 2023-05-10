@@ -15,7 +15,7 @@ struct Article {
     let date: Date
     let author: String
     let body: String?
-    let id: String
+    let id: UUID
     
     init(headline: String, location: Location, date: Date, author: String, body: String?) {
         self.headline = headline
@@ -23,24 +23,6 @@ struct Article {
         self.date = date
         self.body = body
         self.author = author
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from: date)
-        
-        self.id = "\(kebabCase(headline))-\(dateString)"
+        self.id = UUID()
     }
 }
-
-
-func kebabCase(_ titleCaseString: String) -> String {
-    let lowercaseString = titleCaseString.lowercased()
-    let hyphenatedString = lowercaseString.replacingOccurrences(of: " ", with: "-")
-    let allowedCharacters = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "-"))
-    let kebabCaseString = hyphenatedString
-        .components(separatedBy: allowedCharacters.inverted)
-        .joined(separator: "")
-    return kebabCaseString
-}
-
-
