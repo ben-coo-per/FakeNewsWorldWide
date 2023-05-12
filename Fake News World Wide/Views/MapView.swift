@@ -20,8 +20,8 @@ struct MapView: UIViewRepresentable {
                                 latitude: 40.83834587046632,
                                 longitude: 14.254053016537693),
                             span: MKCoordinateSpan(
-                                latitudeDelta: 90,
-                                longitudeDelta: 90)
+                                latitudeDelta: 180,
+                                longitudeDelta: 180)
                             )
         
         return mapView

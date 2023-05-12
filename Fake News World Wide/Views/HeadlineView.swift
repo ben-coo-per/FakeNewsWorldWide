@@ -11,6 +11,7 @@ import SwiftUI
 
 struct HeadlineView: View {
     let headline: String
+    let emoji: String
     let date: Date
     let locationName: String
     let author: String
@@ -19,7 +20,10 @@ struct HeadlineView: View {
         VStack(spacing:16) {
             Divider()
             VStack(spacing:2){
-                Text(headline).frame(maxWidth: .infinity, alignment: .leading).font(.custom("PPEditorialNew-Ultrabold", size: 16)).foregroundColor(.black)
+                HStack {
+                    Text(emoji).font(.system(size: 16))
+                    Text(headline).frame(maxWidth: .infinity, alignment: .leading).font(.custom("PPEditorialNew-Ultrabold", size: 16)).foregroundColor(.black)
+                }
                 HStack(spacing: 10) {
                     HStack(spacing: 2){
                         Image(systemName: "mappin").renderingMode(.template).resizable().aspectRatio(contentMode: .fit).frame(width: 12, height: 12).foregroundColor(Color("subtleText"))

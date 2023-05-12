@@ -12,6 +12,7 @@ import Combine
 
 let stubArticles = [
     Article(headline: "Gondola traffic jam: chaos in Venice's canals",
+            emoji: "🛶",
             location: "Venice, Italy",
             longitude: 12.3155,
             latitude: 45.4408,
@@ -20,6 +21,7 @@ let stubArticles = [
             body: nil
            ),
     Article(headline: "Rio's famous Christ the Redeemer statue gets new sunglasses for summer",
+            emoji: "🕶️",
             location: "Rio de Janeiro, Brazil",
             longitude:  43.1729,
             latitude: 22.9068,
@@ -42,7 +44,6 @@ final class ArticleService: ObservableObject{
     let openAI = OpenAI(apiToken: UserDefaults.standard.string(forKey: "apiKey") ?? "")
     
     func getHeadlines(_ num: Int) -> AnyPublisher<CompletionsResult, Error>{
-        print("api key: \(UserDefaults.standard.string(forKey: "apiKey") ?? "none")")
         return openAI.completions(query: headlineQuery)
     }
     

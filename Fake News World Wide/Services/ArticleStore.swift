@@ -45,12 +45,18 @@ extension ParsingError: LocalizedError {
     }
 }
 
+enum APIError {
+    case noApiKeyError
+}
+
 
 class ArticleStore: ObservableObject {
     @Published var articles: [Article] = []
     private var cancellables = Set<AnyCancellable>()
     
     let service: ArticleService
+    
+    @Published var isLoadingHeadlines = false
     
     init(service: ArticleService) {
         self.service = service
@@ -61,15 +67,21 @@ class ArticleStore: ObservableObject {
     }
     
     func hydrateHeadlines(_ num: Int = 2){
+        isLoadingHeadlines = true
         if articles.isEmpty {
             self.service.getHeadlines(3)
                 .receive(on: DispatchQueue.main)
                 .sink(
                     receiveCompletion: { completion in
-                        print("Received completion: \(completion)")
+                        switch completion {
+                            case .finished:
+                                self.isLoadingHeadlines = false
+                            case .failure(let error):
+                                print("Error: \(error)")
+                                self.isLoadingHeadlines = false
+                            }
                     },
                     receiveValue: { value in
-                        print("called recieved \(value)")
                         let jsonData = Data(value.choices[0].text.utf8)
                         var articlesToAdd: [Article] = []
                         
@@ -93,7 +105,7 @@ class ArticleStore: ObservableObject {
                                 }
                                 
                                 
-                                articlesToAdd.append(Article(headline: a["headline"] as! String, location: a["location"] as! String, longitude: longitude, latitude: latitude, author: a["author"] as! String, publishedAt: nil, body: nil))
+                                articlesToAdd.append(Article(headline: a["headline"] as! String, emoji: a["emoji"] as! String, location: a["location"] as! String, longitude: longitude, latitude: latitude, author: a["author"] as! String, publishedAt: nil, body: nil))
                             }
                             
                             self.addArticles(articlesToAdd)

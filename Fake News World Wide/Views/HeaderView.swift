@@ -12,22 +12,15 @@ struct HeaderView: View {
     var goToSettings: ()->Void
     
     var body: some View {
-        VStack(spacing:0){
-            ZStack {
-                Color("bg").edgesIgnoringSafeArea(.all)
-                VStack {
-                    HStack {
-                        Button(action: goToSettings){
-                            Logo()
-                        }
-                        Spacer()
-//                        HelpButton()
-                    }
+        VStack {
+            HStack {
+                Button(action: goToSettings){
+                    Logo()
                 }
-                .padding(.leading, 10)
-            }.frame(maxHeight: 75, alignment: .top)
-            Divider().frame(height: 2).overlay(.black)
-        }.frame(maxHeight: 75)
+                Spacer()
+            }
+        }
+        .padding(.leading, 24)
     }
 }
 
@@ -35,7 +28,7 @@ struct HeaderView: View {
 struct Logo: View{
     var body: some View {
         Image("fnww-logo")
-            .resizable().aspectRatio(contentMode: .fit).frame(height: 60)
+            .resizable().aspectRatio(contentMode: .fit).frame(height: 45)
     }
 }
 

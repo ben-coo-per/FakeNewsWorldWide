@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct Settings: View {
+    var handleFinish: () -> Void
     @AppStorage("apiKey") private var apiKey: String = ""
     @AppStorage("model") private var model: String = baseModel
-    var handleFinish: () -> Void
-
+    
     var body: some View {
         Form {
             Section(header: Text("OpenAI")) {
@@ -22,7 +22,14 @@ struct Settings: View {
                 Text("Done")
             }
         }
-        .navigationTitle("Settings")
+        .frame(height:300)
         .navigationBarTitleDisplayMode(.inline)
+        .scrollContentBackground(.hidden)
     }
+}
+
+
+public class OpenAISettings: ObservableObject {
+    @AppStorage("apiKey") private var apiKey: String = ""
+    @AppStorage("model") private var model: String = baseModel
 }

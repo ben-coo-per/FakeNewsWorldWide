@@ -13,29 +13,53 @@ struct ContentView: View {
     @StateObject var articleStore = ArticleStore(service:ArticleService())
     @AppStorage("apiKey") private var apiKey: String = ""
     
-    @State var selectedItem = 0
+    @State var settingsOpen: Bool = true
     
+    @ViewBuilder
     var body: some View {
         let locationBinding = Binding.constant( self.articleStore.articles.map { $0.location } )
-        ZStack{
-            Color("bg").edgesIgnoringSafeArea(.all)
-            TabView(selection: $selectedItem) {
-                Settings(handleFinish: {selectedItem = 1}).tag(0)
-                
-                VStack(spacing:0){
-                    HeaderView(goToSettings: {selectedItem = 0})
-                    MapView(locations: locationBinding)
-                    HeadlinesBoxView(){
-                        ForEach(articleStore.articles, id: \.headline){ article in
-                            HeadlineView(headline: article.headline, date: article.date, locationName: article.location.title, author: article.author)
+        
+        VStack(spacing:0){
+            ZStack{
+                MapView(locations: locationBinding).ignoresSafeArea(.all)
+                VStack{
+                    HeaderView(goToSettings: {settingsOpen = true}).frame(alignment: .top)
+                    Spacer()
+                }.padding(0)
+            }
+            HeadlinesBoxView(){
+                if settingsOpen {
+                    Settings(handleFinish: {settingsOpen = false})
+                } else if articleStore.isLoadingHeadlines {
+                    Spacer()
+                    Text("Loading Today's Headlines...")
+                        .frame(maxWidth: .infinity)
+                        .font(.custom("PPTelegraf-UltraboldOblique",size: 24))
+                        .foregroundColor(.black)
+                        .onAppear {
+                            articleStore.hydrateHeadlines()
                         }
+                } else if !articleStore.articles.isEmpty {
+                    Text("Top Headlines").frame(maxWidth: .infinity, alignment: .leading).font(.custom("PPTelegraf-UltraboldOblique", size: 32)).foregroundColor(.black)
+                    ForEach(articleStore.articles, id: \.headline){ article in
+                        HeadlineView(headline: article.headline, emoji: article.emoji, date: article.date, locationName: article.location.title, author: article.author)
                     }
-                }.tag(1)
+                }
+                else {
+                    Spacer()
+                    Text("Something went wrong").frame(maxWidth: .infinity).font(.custom("PPTelegraf-UltraboldOblique", size: 24)).foregroundColor(.black)
+                    Button(action: {articleStore.hydrateHeadlines()}){
+                        Text("Refresh")
+                    }
+                    Text("or").font(.custom("PPTelegraf-UltraboldOblique", size: 16)).foregroundColor(.black)
+                    Button(action: {settingsOpen = true}){
+                        Text("Check your API settings")
+                    }
+                }
             }
-            .tabViewStyle(.page)
-            .onAppear {
-                articleStore.hydrateHeadlines()
-            }
+        }
+        .onAppear {
+            settingsOpen = apiKey.isEmpty ? true : false
         }
     }
 }
