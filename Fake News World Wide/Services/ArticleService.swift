@@ -29,7 +29,7 @@ let stubArticles = [
            ),
 ]
 
-let headlineQuery = CompletionsQuery(model: "text-davinci-003",
+let headlineQuery = CompletionsQuery(model: baseModel,
                                      prompt: HeadlinePrompt,
                                      temperature: 0.78,
                                      maxTokens: 500,
@@ -39,9 +39,10 @@ let headlineQuery = CompletionsQuery(model: "text-davinci-003",
 )
 
 final class ArticleService: ObservableObject{
-    let openAI = OpenAI(apiToken: ProcessInfo.processInfo.environment["OPEN_AI_KEY"] ?? "")
+    let openAI = OpenAI(apiToken: UserDefaults.standard.string(forKey: "apiKey") ?? "")
     
     func getHeadlines(_ num: Int) -> AnyPublisher<CompletionsResult, Error>{
+        print("api key: \(UserDefaults.standard.string(forKey: "apiKey") ?? "none")")
         return openAI.completions(query: headlineQuery)
     }
     

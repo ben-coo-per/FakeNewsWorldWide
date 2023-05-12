@@ -9,13 +9,17 @@ import SwiftUI
 
 
 struct HeaderView: View {
+    var goToSettings: ()->Void
+    
     var body: some View {
         VStack(spacing:0){
             ZStack {
                 Color("bg").edgesIgnoringSafeArea(.all)
                 VStack {
                     HStack {
-                        Logo()
+                        Button(action: goToSettings){
+                            Logo()
+                        }
                         Spacer()
 //                        HelpButton()
                     }
