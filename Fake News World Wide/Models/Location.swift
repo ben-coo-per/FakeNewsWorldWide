@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Location {
+struct Location: Decodable {
     let title: String
-    let latitude: Double
     let longitude: Double
+    let latitude: Double
 }

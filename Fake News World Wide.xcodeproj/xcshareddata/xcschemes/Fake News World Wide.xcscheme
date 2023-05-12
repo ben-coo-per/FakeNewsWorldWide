@@ -49,13 +49,6 @@
             ReferencedContainer = "container:Fake News World Wide.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OPEN_AI_KEY"
-            value = "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"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

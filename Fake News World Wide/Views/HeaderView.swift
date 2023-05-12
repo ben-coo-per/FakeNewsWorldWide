@@ -17,13 +17,13 @@ struct HeaderView: View {
                     HStack {
                         Logo()
                         Spacer()
-                        HelpButton()
+//                        HelpButton()
                     }
                 }
-                .padding()
-            }.frame(maxHeight: 90, alignment: .top)
+                .padding(.leading, 10)
+            }.frame(maxHeight: 75, alignment: .top)
             Divider().frame(height: 2).overlay(.black)
-        }.frame(maxHeight: 90)
+        }.frame(maxHeight: 75)
     }
 }
 

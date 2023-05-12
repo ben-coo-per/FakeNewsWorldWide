@@ -28,6 +28,10 @@
 #
 #########################
 
+
+# Env files
+*.xcconfig
+
 #####
 # OS X temporary files that should never be committed
 #

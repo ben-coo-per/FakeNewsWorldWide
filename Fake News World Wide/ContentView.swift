@@ -19,14 +19,12 @@ struct ContentView: View {
             HeaderView()
             MapView(locations: locationBinding)
             HeadlinesBoxView(){
-                ForEach(articleStore.articles, id: \.id){ article in
+                ForEach(articleStore.articles, id: \.headline){ article in
                     HeadlineView(headline: article.headline, date: article.date, locationName: article.location.title, author: article.author)
                 }
             }
         }.onAppear {
             articleStore.hydrateHeadlines()
-        }.onTapGesture {
-            print(articleStore.articles.count)
         }
     }
 }

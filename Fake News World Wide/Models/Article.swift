@@ -9,20 +9,21 @@
 import Foundation
 
 
-struct Article {
+struct Article: Decodable {
     let headline: String
     let location: Location
-    let date: Date
     let author: String
+    let publishedAt: Date?
     let body: String?
-    let id: UUID
+    let date: Date
     
-    init(headline: String, location: Location, date: Date, author: String, body: String?) {
+    init(headline: String, location: String, longitude: Double, latitude: Double, author: String, publishedAt: Date?, body: String?) {
         self.headline = headline
-        self.location = location
-        self.date = date
-        self.body = body
+        self.location = Location(title: location, longitude: longitude, latitude: latitude)
         self.author = author
-        self.id = UUID()
+        self.publishedAt = publishedAt
+        self.body = body
+        self.date = Date()
+    
     }
 }
