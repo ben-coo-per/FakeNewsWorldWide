@@ -13,8 +13,8 @@ I think the most interesting piece of this app may be the way to showcase news t
 
 Ideally, the app will look something like this:
 
-<img src="https://github.com/bencooper96/FakeNewsWorldWide/assets/40070554/c16c8627-5c5b-4a8e-afc3-d341ae639c49" width="250">
-<img src="https://github.com/bencooper96/FakeNewsWorldWide/assets/40070554/f4d9ddb6-d444-42fa-bfed-fcf8fc94c178" width="250">
+<img src="https://github.com/bencooper96/FakeNewsWorldWide/assets/40070554/70fbb247-657b-4fd9-8424-2a6c81e867c5" width="250">
+<img src="https://github.com/bencooper96/FakeNewsWorldWide/assets/40070554/c91d60cf-4e09-43e2-879a-22a243340eea" width="250">
 
 
 ## Other things to note:
